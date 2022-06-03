@@ -136,4 +136,17 @@
             </plugin>
         </plugins>
     </build>
+
+<!--    Для deploy на удаленном репозитории-->
+<!--    Нужно настроить файл /.m2/settings.xml-->
+<!--    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>localhost</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus</id>
+            <url>localhost</url>
+        </repository>
+    </distributionManagement>-->
 </project>
