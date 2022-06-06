@@ -20,6 +20,12 @@
     <!-- FIXME change it to the project's website -->
     <url>https://www.example.com</url>
 
+<!--    project.groupId-->
+<!--    settings.-->
+<!--    к константам в properties ${}-->
+<!--    env.-->
+<!--    System.getProperty -D -->
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
@@ -52,6 +58,13 @@
     </dependencyManagement>
 
     <build>
+<!--        Можно добавлять любые ресурсы.-->
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <pluginManagement>
             <plugins>
                 <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
