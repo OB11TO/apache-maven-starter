@@ -20,11 +20,11 @@
     <!-- FIXME change it to the project's website -->
     <url>https://www.example.com</url>
 
-<!--    project.groupId-->
-<!--    settings.-->
-<!--    к константам в properties ${}-->
-<!--    env.-->
-<!--    System.getProperty -D -->
+    <!--    project.groupId-->
+    <!--    settings.-->
+    <!--    к константам в properties ${}-->
+    <!--    env.-->
+    <!--    System.getProperty -D -->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -58,7 +58,7 @@
     </dependencyManagement>
 
     <build>
-<!--        Можно добавлять любые ресурсы.-->
+        <!--        Можно добавлять любые ресурсы.-->
         <resources>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
