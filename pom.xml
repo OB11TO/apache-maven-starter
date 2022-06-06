@@ -134,19 +134,40 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.7.1</version>
             </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.8</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>generate-jacoco-report</id>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <!--                        Фаза подготовки к сборке-->
+                        <phase>prepare-package</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
-<!--    Для deploy на удаленном репозитории-->
-<!--    Нужно настроить файл /.m2/settings.xml-->
-<!--    <distributionManagement>
-        <snapshotRepository>
-            <id>nexus</id>
-            <url>localhost</url>
-        </snapshotRepository>
-        <repository>
-            <id>nexus</id>
-            <url>localhost</url>
-        </repository>
-    </distributionManagement>-->
+    <!--    Для deploy на удаленном репозитории-->
+    <!--    Нужно настроить файл /.m2/settings.xml-->
+    <!--    <distributionManagement>
+            <snapshotRepository>
+                <id>nexus</id>
+                <url>localhost</url>
+            </snapshotRepository>
+            <repository>
+                <id>nexus</id>
+                <url>localhost</url>
+            </repository>
+        </distributionManagement>-->
 </project>
