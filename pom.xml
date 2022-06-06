@@ -195,4 +195,44 @@
                 <url>localhost</url>
             </repository>
         </distributionManagement>-->
+
+    <profiles>
+        <profile>
+            <id>prod</id>
+            <!--            Секция, которая активирует profile без флага -P-->
+            <activation>
+                <!--                То, что связанно с os-->
+                <!--                <os>-->
+                <!--                    <family>windows</family>-->
+                <!--                </os>-->
+
+                <!--                Существует ли файл или нет-->
+                <file>
+                    <exists>${basedir}/pom.xml</exists>
+                </file>
+
+                <jdk>11</jdk>
+                <!--                То, что передается в JVM options-->
+<!--                <property>-->
+<!--                    <name>test.prop</name>-->
+<!--                    <value>example</value>-->
+<!--                </property>-->
+                <!--                <activeByDefault>true</activeByDefault>-->
+            </activation>
+            <!--            Переопределения -->
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.8.1</version>
+                        <configuration>
+                            <debug>false</debug>
+                            <optimize>true</optimize>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
