@@ -9,5 +9,27 @@
 
     <artifactId>database</artifactId>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.ob11to</groupId>
+                <artifactId>hello-plugin</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>test-my-plugin</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>hello</goal>
+                        </goals>
+                        <configuration>
+                            <massage>OOOO</massage>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
